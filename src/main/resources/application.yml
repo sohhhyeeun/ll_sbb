@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+#Spring JDBC Driver
+spring:
+  #ORM(jpa)
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create #create-drop #create #validate: 바뀐 부분이 있는지 없는지 검사 #update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver #Driver 구현체로 mysql Driver
+    url: jdbc:mariadb://127.0.0.1:3306/sbb_board?characterEncoding=UTF-8 #연결할 URL
+    username: root #연결할 때 사용할 계정
+    password:
+
